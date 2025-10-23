@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "imageUrl": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500",
+    "title": "오버핏 숏패딩",
+    "brand": "MUSINSA STANDARD",
+    "price": "89,000",
+    "originalPrice": "129,000",
+    "discount": 31,
+    "category": "아우터"
+  },
+  {
+    "id": 2,
+    "imageUrl": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=500",
+    "title": "베이직 크루넥 니트",
+    "brand": "SYSTEM",
+    "price": "49,000",
+    "originalPrice": "",
+    "discount": 0,
+    "category": "상의"
+  },
+  {
+    "id": 3,
+    "imageUrl": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=500",
+    "title": "와이드 슬랙스 팬츠",
+    "brand": "AECA WHITE",
+    "price": "59,000",
+    "originalPrice": "89,000",
+    "discount": 34,
+    "category": "하의"
+  },
+  {
+    "id": 4,
+    "imageUrl": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=500",
+    "title": "레더 첼시 부츠",
+    "brand": "ADER ERROR",
+    "price": "169,000",
+    "originalPrice": "",
+    "discount": 0,
+    "category": "신발"
+  },
+  {
+    "id": 5,
+    "imageUrl": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500",
+    "title": "오버사이즈 코치 재킷",
+    "brand": "THISISNEVERTHAT",
+    "price": "129,000",
+    "originalPrice": "189,000",
+    "discount": 32,
+    "category": "아우터"
+  },
+  {
+    "id": 6,
+    "imageUrl": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500",
+    "title": "하프넥 스웻셔츠",
+    "brand": "ADERERROR",
+    "price": "79,000",
+    "originalPrice": "",
+    "discount": 0,
+    "category": "상의"
+  },
+  {
+    "id": 7,
+    "imageUrl": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=500",
+    "title": "데님 버뮤다 팬츠",
+    "brand": "COVERNAT",
+    "price": "69,000",
+    "originalPrice": "99,000",
+    "discount": 30,
+    "category": "하의"
+  },
+  {
+    "id": 8,
+    "imageUrl": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=500",
+    "title": "스웨이드 로퍼",
+    "brand": "MAISON MARAIS",
+    "price": "139,000",
+    "originalPrice": "",
+    "discount": 0,
+    "category": "신발"
+  },
+  {
+    "id": 9,
+    "imageUrl": "https://images.unsplash.com/photo-1544923408-75c5cef46f14?w=500",
+    "title": "울 트렌치 코트",
+    "brand": "LOOKAST",
+    "price": "239,000",
+    "originalPrice": "329,000",
+    "discount": 27,
+    "category": "아우터"
+  },
+  {
+    "id": 10,
+    "imageUrl": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=500",
+    "title": "라운드 니트 베스트",
+    "brand": "NAMEOUT",
+    "price": "45,000",
+    "originalPrice": "",
+    "discount": 0,
+    "category": "상의"
+  },
+  {
+    "id": 11,
+    "imageUrl": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=500",
+    "title": "코듀로이 와이드 팬츠",
+    "brand": "BONNIE PLANET",
+    "price": "69,000",
+    "originalPrice": "95,000",
+    "discount": 27,
+    "category": "하의"
+  },
+  {
+    "id": 12,
+    "imageUrl": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=500",
+    "title": "캔버스 스니커즈",
+    "brand": "EXCELSIOR",
+    "price": "59,000",
+    "originalPrice": "",
+    "discount": 0,
+    "category": "신발"
+  }
+]

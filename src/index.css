@@ -1,3 +1,13 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -24,8 +34,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -64,5 +72,31 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+/* Responsive additions */
+.top-search { width: 100%; max-width: 520px; flex: 0 1 520px; }
+.top-search-input { width: 100%; }
+.top-search-btn { right: 8px; }
+
+@media (min-width: 1200px) {
+  .top-search { max-width: 560px; flex-basis: 560px; }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .top-search { max-width: 440px; flex-basis: 440px; }
+}
+
+@media (max-width: 767px) {
+  body { place-items: stretch; }
+  .top-search { max-width: none; flex-basis: 100%; margin: 8px 0 !important; }
+}
+
+/* Tight header links on narrow widths */
+@media (max-width: 1024px) {
+  a[style*="font-size: 14px"], a[style*="font-size: 12px"] {
+    font-size: 12px !important;
+    white-space: nowrap;
   }
 }

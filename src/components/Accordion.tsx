@@ -28,9 +28,11 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
     <div
       style={{
         border: "1px solid #e5e7eb",
-        borderRadius: "8px",
-        marginBottom: "8px",
+        borderRadius: "12px",
+        marginBottom: "16px",
         overflow: "hidden",
+        boxShadow: isOpen ? "0 4px 12px rgba(0,0,0,0.05)" : "none",
+        transition: "box-shadow 0.3s ease",
         ...style,
       }}
     >
@@ -39,33 +41,23 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
         disabled={disabled}
         style={{
           width: "100%",
-          padding: "16px 20px",
-          background: "#ffffff",
+          padding: "20px",
+          background: isOpen ? "#f9fafb" : "#ffffff",
           border: "none",
           textAlign: "left",
           cursor: disabled ? "not-allowed" : "pointer",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          transition: "all 0.2s ease",
+          transition: "background 0.2s ease",
           ...(disabled && { opacity: 0.6 }),
-        }}
-        onMouseEnter={(e) => {
-          if (!disabled) {
-            e.currentTarget.style.background = "#f9fafb";
-          }
-        }}
-        onMouseLeave={(e) => {
-          if (!disabled) {
-            e.currentTarget.style.background = "#ffffff";
-          }
         }}
         aria-expanded={isOpen}
         aria-disabled={disabled}
       >
         <span style={{
           fontSize: "1rem",
-          fontWeight: "500",
+          fontWeight: "600",
           color: "#111827",
         }}>
           {title}
@@ -76,8 +68,8 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
           justifyContent: "center",
           width: "20px",
           height: "20px",
-          transition: "transform 0.2s ease",
-          transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+          transition: "transform 0.3s ease",
+          transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
         }}>
           <svg
             width="16"
@@ -87,7 +79,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M4 6L8 10L12 6"
+              d="M8 1V15M1 8H15"
               stroke="currentColor"
               strokeWidth="2"
               strokeLinecap="round"
@@ -101,12 +93,12 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
         style={{
           maxHeight: isOpen ? "1000px" : "0",
           overflow: "hidden",
-          transition: "max-height 0.3s ease",
+          transition: "max-height 0.3s ease-in-out",
+          background: "#f9fafb",
         }}
       >
         <div style={{
           padding: "0 20px 20px 20px",
-          borderTop: "1px solid #f3f4f6",
         }}>
           {children}
         </div>

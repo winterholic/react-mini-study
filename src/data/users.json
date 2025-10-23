@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": "admin123",
+    "name": "관리자",
+    "email": "admin@void.com"
+  },
+  {
+    "id": 2,
+    "username": "test",
+    "password": "test123",
+    "name": "테스트 유저",
+    "email": "test@void.com"
+  },
+  {
+    "id": 3,
+    "username": "user",
+    "password": "user123",
+    "name": "일반 유저",
+    "email": "user@void.com"
+  }
+]

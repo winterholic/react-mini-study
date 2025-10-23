@@ -9,6 +9,7 @@ interface ModalProps {
   closeOnOverlayClick?: boolean;
   showCloseButton?: boolean;
   style?: React.CSSProperties;
+  theme?: "light" | "dark";
 }
 
 const Modal: React.FC<ModalProps> = ({
@@ -20,6 +21,7 @@ const Modal: React.FC<ModalProps> = ({
   closeOnOverlayClick = true,
   showCloseButton = true,
   style,
+  theme = "light",
 }) => {
   const sizeConfig = {
     sm: { width: "400px", maxWidth: "90vw" },
@@ -29,6 +31,29 @@ const Modal: React.FC<ModalProps> = ({
   };
 
   const config = sizeConfig[size];
+
+  const themeStyles = {
+    light: {
+      overlay: "rgba(0, 0, 0, 0.5)",
+      background: "#ffffff",
+      titleColor: "#111827",
+      borderColor: "#e5e7eb",
+      closeButtonColor: "#6b7280",
+      closeButtonHoverBg: "#f3f4f6",
+      closeButtonHoverColor: "#374151",
+    },
+    dark: {
+      overlay: "rgba(0, 0, 0, 0.8)",
+      background: "rgba(18, 18, 18, 0.98)",
+      titleColor: "#ffffff",
+      borderColor: "rgba(255, 255, 255, 0.1)",
+      closeButtonColor: "rgba(255, 255, 255, 0.6)",
+      closeButtonHoverBg: "rgba(255, 255, 255, 0.1)",
+      closeButtonHoverColor: "#ffffff",
+    },
+  };
+
+  const currentTheme = themeStyles[theme];
 
   useEffect(() => {
     if (isOpen) {
@@ -68,20 +93,23 @@ const Modal: React.FC<ModalProps> = ({
         left: 0,
         right: 0,
         bottom: 0,
-        background: "rgba(0, 0, 0, 0.5)",
+        background: currentTheme.overlay,
+        backdropFilter: theme === "dark" ? "blur(8px)" : undefined,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         zIndex: 1000,
         padding: "20px",
+        animation: "fadeIn 0.2s ease-out",
         ...style,
       }}
       onClick={closeOnOverlayClick ? onClose : undefined}
     >
       <div
         style={{
-          background: "#ffffff",
-          borderRadius: "12px",
+          background: currentTheme.background,
+          border: theme === "dark" ? `1px solid ${currentTheme.borderColor}` : undefined,
+          borderRadius: theme === "dark" ? "20px" : "12px",
           boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
           width: config.width,
           maxWidth: config.maxWidth,
@@ -89,13 +117,14 @@ const Modal: React.FC<ModalProps> = ({
           overflow: "hidden",
           display: "flex",
           flexDirection: "column",
+          animation: "slideUp 0.3s ease-out",
         }}
         onClick={(e) => e.stopPropagation()}
       >
         {title && (
           <div style={{
             padding: "20px 24px 16px 24px",
-            borderBottom: "1px solid #e5e7eb",
+            borderBottom: `1px solid ${currentTheme.borderColor}`,
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
@@ -104,7 +133,7 @@ const Modal: React.FC<ModalProps> = ({
               margin: 0,
               fontSize: "1.25rem",
               fontWeight: "600",
-              color: "#111827",
+              color: currentTheme.titleColor,
             }}>
               {title}
             </h2>
@@ -113,12 +142,12 @@ const Modal: React.FC<ModalProps> = ({
                 onClick={onClose}
                 style={{
                   background: "transparent",
-                  border: "none",
+                  border: theme === "dark" ? `1px solid ${currentTheme.borderColor}` : "none",
                   fontSize: "1.5rem",
-                  color: "#6b7280",
+                  color: currentTheme.closeButtonColor,
                   cursor: "pointer",
                   padding: "4px",
-                  borderRadius: "4px",
+                  borderRadius: theme === "dark" ? "8px" : "4px",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -127,12 +156,12 @@ const Modal: React.FC<ModalProps> = ({
                   transition: "all 0.2s ease",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "#f3f4f6";
-                  e.currentTarget.style.color = "#374151";
+                  e.currentTarget.style.background = currentTheme.closeButtonHoverBg;
+                  e.currentTarget.style.color = currentTheme.closeButtonHoverColor;
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = "transparent";
-                  e.currentTarget.style.color = "#6b7280";
+                  e.currentTarget.style.color = currentTheme.closeButtonColor;
                 }}
                 aria-label="모달 닫기"
               >

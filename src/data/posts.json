@@ -1,0 +1,82 @@
+[
+    {
+      "id": 1,
+      "title": "2024년 패션 트렌드 예측",
+      "excerpt": "올해 주목해야 할 패션 트렌드와 스타일링 팁을 소개합니다.",
+      "author": "VOID. 에디터",
+      "date": "2024.01.15",
+      "category": "패션",
+      "readTime": "5분",
+      "image": "#F3F4F6"
+    },
+    {
+      "id": 2,
+      "title": "지속가능한 패션의 중요성",
+      "excerpt": "환경을 생각하는 패션 소비 방법과 브랜드 추천을 알아보세요.",
+      "author": "VOID. 에디터",
+      "date": "2024.01.12",
+      "category": "라이프스타일",
+      "readTime": "7분",
+      "image": "#EFF6FF"
+    },
+    {
+      "id": 3,
+      "title": "겨울 아우터 코디법",
+      "excerpt": "추운 날씨에도 스타일리시하게 코디하는 방법을 공유합니다.",
+      "author": "VOID. 에디터",
+      "date": "2024.01.10",
+      "category": "스타일링",
+      "readTime": "4분",
+      "image": "#F5F3FF"
+    },
+    {
+      "id": 4,
+      "title": "미니멀 워드로브 구성하기",
+      "excerpt": "적은 옷으로도 다양한 스타일을 연출하는 방법을 소개합니다.",
+      "author": "VOID. 에디터",
+      "date": "2024.01.08",
+      "category": "라이프스타일",
+      "readTime": "6분",
+      "image": "#ECFDF5"
+    },
+    {
+      "id": 5,
+      "title": "도쿄 여행 3박 4일 추천 코스",
+      "excerpt": "도쿄의 맛집, 명소, 쇼핑 리스트를 한번에 확인하세요.",
+      "author": "여행 전문가",
+      "date": "2024.02.20",
+      "category": "여행",
+      "readTime": "10분",
+      "image": "#FEF2F2"
+    },
+    {
+      "id": 6,
+      "title": "성수동 맛집 베스트 5",
+      "excerpt": "웨이팅 필수! 성수동의 핫한 맛집들을 소개합니다.",
+      "author": "음식 평론가",
+      "date": "2024.02.18",
+      "category": "음식",
+      "readTime": "6분",
+      "image": "#FFFBEB"
+    },
+    {
+      "id": 7,
+      "title": "내 집 마련, 부동산 투자 전략",
+      "excerpt": "부동산 시장 분석과 성공적인 투자 전략을 알아봅니다.",
+      "author": "부동산 컨설턴트",
+      "date": "2024.02.15",
+      "category": "부동산",
+      "readTime": "8분",
+      "image": "#F0FDF4"
+    },
+    {
+      "id": 8,
+      "title": "React 19, 무엇이 달라졌을까?",
+      "excerpt": "React 19의 새로운 기능과 주요 변경 사항을 정리했습니다.",
+      "author": "프론트엔드 개발자",
+      "date": "2024.02.12",
+      "category": "IT",
+      "readTime": "12분",
+      "image": "#EFF6FF"
+    }
+  ]
